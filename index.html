@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Frontend Toolkit</title>
+        <script type="text/javascript">
+            
+            /**
+             * Embed code to load scripts. Creates elements
+             * @return data/html Embedding html or sending data to server
+             */
+            (function(){
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'app.bundle.js';
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+                var myVar = 'this is a testing test';
+            })();
+    
+        </script>
+    </head>
+    <body>
+        <div class="content">
+        </div>
+    </body>
+</html>
