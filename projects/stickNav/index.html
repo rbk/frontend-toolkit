@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="stick nav">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Stick Nav</title>
+       	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+       	<style>
+       		body {
+       			font-family: arial;
+       		}
+       		.wrap {
+       			margin: 0 auto;
+       			max-width: 1200px;
+       		}
+       		nav ul li {
+				display: inline-block;
+				margin-right: 1em;
+				text-transform: uppercase;
+       		}
+       		ul {
+       			list-style: none;
+       			padding: 1em;
+       			margin: 0;
+       		}
+			
+			.content {
+				max-width: 1200px;
+				background-color: #eee;
+				margin: 0 auto;
+				height: 2000px;
+				position: relative;
+			}
+			aside {
+				background-color: #000;
+				padding: 2em;
+				color: #fff;
+				width: 400px;
+				line-height: 1.5;
+				position: absolute;
+				right: 0;
+			} 
+			.site-footer {
+				background-color: #666;
+				height:500px;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+			}
+
+       	</style>
+    </head>
+    <body>
+    	<nav>
+    	<div class="wrap">
+    		
+    		<ul>
+    			<li>home</li>
+    			<li>about</li>
+    			<li>contact</li>
+    		</ul>
+    	</div>
+    	</nav>
+        <div class="content">
+        	<aside class="stick-nav">
+        		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores excepturi aliquid distinctio! Nemo quos enim ut itaque, nesciunt vel, inventore molestias eum distinctio sequi minima nostrum, voluptate. Tempora, a.
+        	</aside>
+        	<div class="site-footer"></div>
+        </div>
+        <script>
+            (function($, window, document) {
+
+
+            	var nav = document.querySelector('stick-nav');
+
+                
+            })(jQuery, window, document);
+        </script>
+        <script src="sticknav.js"></script>
+    </body>
+</html>
