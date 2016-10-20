@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Map</title>
+	<script src="//maps.googleapis.com/maps/api/js?&sensor=true&libraries=drawing"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="jquery.map3.js"></script>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+
+
+<div id="map1"></div>
+<div id="map2"></div>
+
+<script>
+	jQuery(document).ready(function($){
+		
+		$('#map1').googleMap({
+			coordinates: '36.155774,-95.98689',
+			zoom: 13,
+			infodata: '<div style="padding:5px;background-color:blue">MAP 2</div>',
+			markers: [
+				{name: 'test1', coordinates: '36.155774,-95.98689', infoboxdata: '<h1>test1</h1>', icon: ''},
+				{name: 'test2', coordinates: '36.145774,-95.98689', infoboxdata: '<h1>test2</h1>', icon: ''},
+				{name: 'test3', coordinates: '36.135774,-95.98689', infoboxdata: '<h1>test3</h1>', icon: ''}
+			]
+		}).css({height: '300px',width: '300px', float: 'left', 'margin' :'20px'});
+		$('#map2').googleMap({
+			coordinates: '36.155774,-95.98689',
+			zoom: 13,
+			infodata: '<div style="padding:5px;background-color:blue">MAP 2</div>',
+			markers: [
+				{name: 'test1', coordinates: '36.155774,-95.98689', infoboxdata: '<h1>test1</h1>', icon: ''},
+				{name: 'test2', coordinates: '36.145774,-95.98689', infoboxdata: '<h1>test2</h1>', icon: ''}
+				// {name: 'test3', coordinates: '36.135774,-95.98689', infoboxdata: '<h1>test3</h1>', icon: ''}
+			]
+		}).css({height: '300px',width: '300px', float: 'left', 'margin' :'20px'});
+
+	});
+</script>
+</body>
+</html>

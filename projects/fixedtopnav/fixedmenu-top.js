@@ -5,7 +5,6 @@
 		style = null,
 		inRange = false,
 		originalOffset = topNav.offsetTop,
-		
 
 	// Custom Style
 	style = document.createElement('style');

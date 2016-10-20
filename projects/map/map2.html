@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Map</title>
+	<script src="//maps.googleapis.com/maps/api/js?&sensor=true&libraries=drawing"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="jquery.map.js"></script>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+
+
+<div id="map1"></div>
+<div id="map2"></div>
+
+<script>
+	jQuery(document).ready(function($){
+		
+		$('#map1').googleMap({
+			coordinates: '36.155774,-95.98689',
+			infodata: '<div style="padding:5px;background-color:red">MAP 1</div>'
+		}).css({height: '300px',width: '300px', float: 'left', 'margin' :'20px'});
+		$('#map2').googleMap({
+			coordinates: '36.155774,-95.98689',
+			infodata: '<div style="padding:5px;background-color:blue">MAP 2</div>'
+		}).css({height: '300px',width: '300px', float: 'left', 'margin' :'20px'});
+
+	});
+</script>
+</body>
+</html>

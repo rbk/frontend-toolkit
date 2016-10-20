@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Map</title>
+	<script src="//maps.googleapis.com/maps/api/js?&sensor=true&libraries=drawing"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="map.js"></script>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+
+<div id="map" style="padding-top: 50%;max-height:500px;width:100%;"></div>
+<script>
+	jQuery(document).ready(function($){
+		
+		var yellow = '#FFC000';
+		var orange = '#C85304';
+
+		var s1 = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#004358"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#FFC000"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#FFC000"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#fd7400"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":'#C85304'},{"lightness":5}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":'#C85304'},{"lightness":5}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"},{"visibility":"on"},{"weight":0.9}]},{"elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"color":"#ffffff"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#FFC000"},{"lightness":-10}]},{},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#FFC000"},{"weight":0.7}]}];
+
+		$('#map').googleMap({
+			styles: s1,
+			zoom: 17
+		});
+	
+	});
+</script>
+</body>
+</html>

@@ -22,16 +22,6 @@ $data = [
     'lastname'  => ''
 ];
 
-// $result = syncMailchimp( $data );
-// if( $result ) {
-//     echo 'yes';
-// } else {
-//     echo 'no';
-// }
-
-// echo '<pre>'; print_r( json_decode($result) ); echo '</pre>';
-
-
 class SyncMailchimp {
     
     public $errors = array();
@@ -137,8 +127,6 @@ $mc->sign_up_user(array(
     'firstname' => '',
     'lastname'  => ''
 ));
-
-
 // $mc->unsubscribe_user( 'richard@gurustu.co' );
 $mc->show_errors();
 
